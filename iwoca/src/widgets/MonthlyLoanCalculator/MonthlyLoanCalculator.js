@@ -43,7 +43,7 @@ const MonthlyLoadCalculator = () => {
      */
     useEffect(() => {
         (async () => {
-            fetch('http://www.mocky.io/v2/5d4aa9e93300006f000f5ea9')
+            fetch('https://www.mocky.io/v2/5d4aa9e93300006f000f5ea9')
                 .then(response => response.json())
                 .then(data => setAmountLimits(data));
         })();
