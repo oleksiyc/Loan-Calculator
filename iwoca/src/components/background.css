@@ -1,0 +1,22 @@
+svg.shape-circle, svg.shape-odd, svg.shape-triangle{
+    overflow: hidden;
+    position:absolute;
+    z-index:0;
+    opacity:.5;
+}
+
+svg.shape-circle{
+    top:-70px;
+    left:-140px;
+}
+
+svg.shape-odd{
+    top:200px;
+    right: -170px;
+}
+
+svg.shape-triangle{
+    bottom: -100px;
+    left: -100px;
+    position: fixed;
+}

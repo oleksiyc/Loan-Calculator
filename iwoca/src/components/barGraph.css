@@ -1,0 +1,12 @@
+.bar-chart{
+    width:400px;
+    height:400px;
+}
+
+.value{
+    color:white;
+}
+
+.x-axis .domain, .y-axis .domain{
+    opacity:0;
+}

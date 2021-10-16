@@ -1,0 +1,108 @@
+.widget-container{
+    position: relative;
+    border-radius: 16px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgb(170 190 209 / 25%);
+    background:white;
+    overflow:hidden;
+    height:800px;
+    overflow: auto;
+}
+
+.widget-container-header{
+    background:#0c2340;
+    color:white;
+    padding:50px;
+}
+
+.widget-container-body{
+    display:flex;
+    flex-flow:row;
+}
+
+.widget-container-body > div{
+    flex:1;
+}
+
+.ant-form-item-control-input-content{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.ant-form label{
+    font-size:18px;
+}
+
+.ant-input-number{
+    border-radius: 10px;
+}
+
+.ant-input-number-input{
+    font-weight:600;
+}
+
+.ant-row.ant-form-item{
+    display:flex;
+}
+
+.ant-row.ant-form-item .ant-form-item-label, .ant-input-number{
+    flex:1;
+}
+
+.ant-row.ant-form-item .ant-form-item-control{
+    flex:3;
+}
+
+#amount-slider, #date-slider{
+    flex:2;
+    margin-left:20px;
+}
+
+form .ant-form-item:last-child{
+    margin-bottom: 0;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: white;
+    outline: none;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #0c2340;
+    border: solid 3px white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .widget-container-body{
+        display:flex;
+        flex-flow:column;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .app-container{
+        align-items:baseline;
+    }
+}
