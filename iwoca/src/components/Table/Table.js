@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './table.css'
-import BarGraph from './BarGraph'
+import BarGraph from '../BarGraph/BarGraph'
 import {FaList, FaChartBar} from "react-icons/fa"
 import {Table} from 'antd'
-import Helpers from '../Helpers/Helpers'
+import Helpers from '../../Helpers/Helpers'
 
 const Tables = (props) => {
     const [view, changeView] = useState('table');
@@ -25,7 +25,7 @@ const Tables = (props) => {
                 view === 'graph' ?
                     <BarGraph id={props['data-id']} data={props.data}></BarGraph>
                     : <div className="table-wrapper">
-                        <Table dataSource={props.data} columns={props.columns} pagination={false}
+                        <Table key={'table + props["data-id"]'} dataSource={props.data} columns={props.columns} pagination={false}
                            locale={{emptyText: 'Those inputs are not eligible for this type of loan'}} bordered
                            summary={pageData => {
                                return (

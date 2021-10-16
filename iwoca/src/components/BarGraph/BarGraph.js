@@ -10,24 +10,25 @@ import {
 import './barGraph.css'
 
 const BarGraph = (props) => {
-
     const keys = ["principal", "interest"];
-
     const colors = {
         principal: "#2b4959",
         interest: "#69a0e2",
     };
     useEffect(() => {
+        /* remove current before drawing a new graph */
         var svgs = select("#bar_chart_" + props.id)
         svgs.selectAll('*').remove();
 
         const svg = select("#chart_" + props.id);
-        const margin = { top: 20, right: 20, bottom: 60, left: 60 };
+        const margin = {top: 20, right: 20, bottom: 60, left: 60};
         const graphWidth = 400 - margin.left - margin.right;
         const graphHeight = 400 - margin.top - margin.bottom;
         const stackGenerator = stack().keys(keys);
         const layers = stackGenerator(props.data);
-        const yScale = scaleLinear().domain([0, Math.max.apply(Math, props.data.map(function(val) { return val.total_repayment; }))]).range([graphHeight, 0]);
+        const yScale = scaleLinear().domain([0, Math.max.apply(Math, props.data.map(function (val) {
+            return val.total_repayment;
+        }))]).range([graphHeight, 0]);
 
         const x0Scale = scaleBand()
             .domain(props.data.map((d) => d.date))
@@ -67,14 +68,12 @@ const BarGraph = (props) => {
             .attr("height", (sequence) => yScale(sequence[0]) - yScale(sequence[1]));
     }, [props.data]);
     return (
-        <div
-
-            style={{ width: "450px", height: "400px"}}
-        >{props.data.length === 0 ? <>Dont support fam</> : <svg id={"chart_" + props.id} style={{ width: "90%", height: "110%" }}>
-            <g className="x-axis" />
-            <g className="y-axis" />
-        </svg>}
-
+        <div style={{width: "450px", height: "400px"}}
+        >{props.data.length === 0 ? <>Those inputs are not eligible for this type of loan</> :
+            <svg id={"chart_" + props.id} style={{width: "90%", height: "110%"}}>
+                <g className="x-axis"/>
+                <g className="y-axis"/>
+            </svg>}
         </div>
     )
 }

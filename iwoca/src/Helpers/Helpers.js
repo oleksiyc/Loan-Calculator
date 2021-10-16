@@ -23,9 +23,15 @@ const helpers = {
             return []
         }
     },
+    /*
+        return principle value
+     */
     getPrincipleMonthlyPayment: function (props) {
         return Math.ceil(props.amount / (props.months));
     },
+    /*
+        returns a list of monthly interest calculations based on the prop values
+     */
     getMonthlyInterestedPayments: function (props) {
         let totalAmountToPayLeft = props.amount;
         const principalPayment = this.getPrincipleMonthlyPayment(props);
@@ -37,6 +43,9 @@ const helpers = {
             return interest;
         });
     },
+    /*
+        returns if the amount/month are within the limit per table
+     */
     passesMinMaxValidation: function (props) {
         if (!props.limits) {
             return true;
@@ -52,9 +61,15 @@ const helpers = {
             props.limits[loanType].duration_min <= months
         )
     },
+    /*
+        convert into to a currency display value
+     */
     intToCurrency: function (value, currency) {
         return currency + ' ' + value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
     },
+    /*
+        Add all values of a key from a list of objects
+     */
     reduceSum: function(list, key){
         return list.reduce(function (val, row) {
             return val + row[key];

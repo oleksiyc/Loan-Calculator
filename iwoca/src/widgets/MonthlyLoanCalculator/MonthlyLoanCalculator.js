@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import Table from "../components/Table";
-import Helpers from "../Helpers/Helpers";
+import Table from "../../components/Table/Table";
+import Helpers from "../../Helpers/Helpers";
 import {Form, InputNumber, Tooltip} from "antd";
 import 'antd/dist/antd.css';
-import './widget.css'
+import '../widget.css'
 
 
 const MonthlyLoadCalculator = () => {

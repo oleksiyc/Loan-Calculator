@@ -39,32 +39,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Personal Feedback
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This is calculator app design for Iwoca FE Developer test. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Technologies used:
 
-### Code Splitting
+React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+antd => used to quicker html and css building which allowed me to spend more time on other things
 
-### Analyzing the Bundle Size
+d3 => used for the bar chart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+fa-icons => icons when switching between table and graph mode
 
-### Making a Progressive Web App
+moment => to calculate times
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+The main functionality lies in the MonthlyLoanCalculator widget where is uses some generic components like Table, BarChart
+and Helper functions to build a full calculator. I copied the design from https://www.iwoca.co.uk/calculator/ to make sure it matches the employers standarts in therms of UX.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If I had more time I would spend it writing more tests, especially integration or E2E.

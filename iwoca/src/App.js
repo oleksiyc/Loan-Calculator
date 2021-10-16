@@ -1,6 +1,6 @@
 import './App.css';
-import LoanCalculator from "./widgets/MonthlyLoanCalculator";
-import Background from "./components/Background";
+import LoanCalculator from "./widgets/MonthlyLoanCalculator/MonthlyLoanCalculator";
+import Background from "./components/Background/Background";
 
 function App() {
   return (
