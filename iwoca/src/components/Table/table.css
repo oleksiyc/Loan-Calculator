@@ -70,7 +70,6 @@ h2{
 
 .ant-table-thead th{
     font-weight:600 !important;
-    white-space: nowrap;
 }
 td.ant-table-cell {
     white-space: nowrap;

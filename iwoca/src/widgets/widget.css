@@ -7,6 +7,7 @@
     overflow:hidden;
     height:800px;
     overflow: auto;
+    width:1000px;
 }
 
 .widget-container-header{
@@ -94,10 +95,13 @@ form .ant-form-item:last-child{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
     .widget-container-body{
         display:flex;
         flex-flow:column;
+    }
+    .widget-container{
+        width: auto;
     }
 }
 
