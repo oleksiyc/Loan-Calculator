@@ -65,6 +65,7 @@ const helpers = {
         convert into to a currency display value
      */
     intToCurrency: function (value, currency) {
+        if (!value) return;
         return currency + ' ' + value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
     },
     /*
