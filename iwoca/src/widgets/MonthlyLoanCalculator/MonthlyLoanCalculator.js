@@ -74,7 +74,7 @@ const MonthlyLoadCalculator = () => {
                             value={months}
                             onChange={(val) => setMonths(val)}
                             formatter={value => `${value} months`}
-                            parser={value => value.replace('months', '')}
+                            parser={value => value.replace(' months', '')}
                         />
                     </Tooltip>
                     <input id="date-slider" className="slider" type="range" value={months} min={1} max={60} step={1}
