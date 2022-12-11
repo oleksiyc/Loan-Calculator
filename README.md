@@ -41,23 +41,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Personal Feedback
-
-This is calculator app design for Iwoca FE Developer test. 
-
-Technologies used:
-
-React
-
-antd => used to quicker html and css building which allowed me to spend more time on other things
-
-d3 => used for the bar chart
-
-fa-icons => icons when switching between table and graph mode
-
-moment => to calculate times
-
-
 The main functionality lies in the MonthlyLoanCalculator widget where is uses some generic components like Table, BarChart
 and Helper functions to build a full calculator. I copied the design from https://www.iwoca.co.uk/calculator/ to make sure it matches the employers standarts in therms of UX.
 
